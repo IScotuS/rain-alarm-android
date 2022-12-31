@@ -1,17 +1,21 @@
 package com.example.rainalarm;
 
-import static android.content.ContentValues.TAG;
-
+import android.app.Service;
+import android.app.job.JobParameters;
+import android.app.job.JobScheduler;
+import android.app.job.JobService;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 
@@ -19,23 +23,22 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
-
-import javax.net.ssl.HttpsURLConnection;
-
-public class WeatherDataService {
+public class WeatherDataService extends JobService {
     final String API_KEY = "d1e397184bca47a4d90428c5fb8df78f";
 
+    final double latitude = 48.3804453;
+    final double longitude = -4.5120015;
+
     Context ctx;
+
+    public WeatherDataService() {
+//        super("WeatherDataService");
+    }
 
     public WeatherDataService(Context ctx) {
         this.ctx = ctx;
     }
-    
+
     public interface WeatherForecastListener {
         void onResponse(WeatherDataModel[] weather_forecast);
 
@@ -47,9 +50,46 @@ public class WeatherDataService {
 
         void onError(String message);
     }
-    
-    
-    public void getWeatherReport(double latitude, double longitude, WeatherForecastListener weatherForecastListener, WeatherImageListener weatherImageListener) {
+
+    @Override
+    public boolean onStartJob(JobParameters jobParameters) {
+        Intent intent = new Intent("com.example.rainalarm");
+
+        getWeatherReport(new WeatherForecastListener() {
+            @Override
+            public void onResponse(WeatherDataModel[] weather_forecast) {
+                intent.putExtra("temp", weather_forecast);
+                Log.v("SCHEDULER", "Temp Success!");
+                Toast.makeText(getApplicationContext(), "Temp Success!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onError(String message) {
+                intent.putExtra("error_temp", message);
+            }
+        }, new WeatherImageListener() {
+            @Override
+            public void onResponse(WeatherDataModel weather_forecast_hour, int i) {
+                intent.putExtra("icon", weather_forecast_hour);
+                intent.putExtra("index", i);
+            }
+
+            @Override
+            public void onError(String message) {
+                intent.putExtra("error_icon", message);
+            }
+        });
+
+        Util.scheduleJob(getApplicationContext());
+        return true;
+    }
+
+    @Override
+    public boolean onStopJob(JobParameters jobParameters) {
+        return false;
+    }
+
+    public void getWeatherReport(WeatherForecastListener weatherForecastListener, WeatherImageListener weatherImageListener) {
         String url = "https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=" + latitude
                 + "&lon=" + longitude + "&appid=" + API_KEY + "&units=metric&cnt=21";
 

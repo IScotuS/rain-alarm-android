@@ -3,6 +3,9 @@ package com.example.rainalarm;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -20,15 +23,21 @@ public class MainActivity extends AppCompatActivity {
     ImageView[] img_weatherHour = new ImageView[21];
 
     WeatherDataService wds = new WeatherDataService(this);
+//    private BroadcastReceiver receiver = new BroadcastReceiver() {
+//        @Override
+//        public void onReceive(Context context, Intent intent) {
+//            Bundle bundle = intent.getExtras();
+//            if (bundle)
+//        }
+//    };
 
-    double latitude = 48.3804453;
-    double longitude = -4.5120015;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Util.scheduleJob(this);
         txt_currentCity = findViewById(R.id.txt_currentCity);
         txt_currentTemp = findViewById(R.id.txt_currentTemp);
         txt_customMsg = findViewById(R.id.txt_customMsg);
@@ -48,8 +57,12 @@ public class MainActivity extends AppCompatActivity {
             txt_timeHour[i] = findViewById(timeID);
             img_weatherHour[i] = findViewById(weatherID);
         }
- 
-        wds.getWeatherReport(latitude, longitude, new WeatherDataService.WeatherForecastListener() {
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        wds.getWeatherReport(new WeatherDataService.WeatherForecastListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onResponse(WeatherDataModel[] weather_forecast) {
@@ -86,6 +99,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }

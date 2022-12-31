@@ -26,6 +26,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <service
+            android:name="com.example.rainalarm.WeatherDataService"
+            android:label="Weather Service"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
     </application>
 
 </manifest>
