@@ -4,7 +4,7 @@
 Rain Alarm
 
 ## Description
-Rain Alarm is, as its name suggests, alarms its user when it will rain shortly in the future. 
+Rain Alarm is, as its name suggests, alarms the user when it will rain shortly in the future. 
 
 ## Visuals
 Soon..
