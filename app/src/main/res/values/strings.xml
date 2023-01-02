@@ -44,5 +44,28 @@
     <string name="time_hour_18">--</string>
     <string name="time_hour_19">--</string>
     <string name="time_hour_20">--</string>
+    <string name="pop_hour_0">--</string>
+    <string name="pop_hour_1">--</string>
+    <string name="pop_hour_2">--</string>
+    <string name="pop_hour_3">--</string>
+    <string name="pop_hour_4">--</string>
+    <string name="pop_hour_5">--</string>
+    <string name="pop_hour_6">--</string>
+    <string name="pop_hour_7">--</string>
+    <string name="pop_hour_8">--</string>
+    <string name="pop_hour_9">--</string>
+    <string name="pop_hour_10">--</string>
+    <string name="pop_hour_11">--</string>
+    <string name="pop_hour_12">--</string>
+    <string name="pop_hour_13">--</string>
+    <string name="pop_hour_14">--</string>
+    <string name="pop_hour_15">--</string>
+    <string name="pop_hour_16">--</string>
+    <string name="pop_hour_17">--</string>
+    <string name="pop_hour_18">--</string>
+    <string name="pop_hour_19">--</string>
+    <string name="pop_hour_20">--</string>
+    <string name="btn_locateMe">Send Location</string>
+
 
 </resources>

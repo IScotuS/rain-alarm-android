@@ -18,7 +18,8 @@
             android:layout_marginTop="20dp"
             android:text="@string/custom_msg"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_currentTemp" />
@@ -27,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="96dp"
             android:scrollbarThumbHorizontal="@null"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_customMsg">
@@ -45,147 +46,168 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_0"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_1"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_2"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_3"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_4"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_5"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_6"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_7"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_8"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_9"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_10"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_11"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_12"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_13"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_14"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_15"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_16"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_17"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_18"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_19"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
 
                     <TextView
                         android:id="@+id/txt_timeHour20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time_hour_20"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark" />
                 </TableRow>
 
                 <TableRow
@@ -371,7 +393,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_0"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour1"
@@ -379,7 +403,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_1"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour2"
@@ -387,7 +413,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_2"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour3"
@@ -395,7 +423,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_3"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour4"
@@ -403,7 +433,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_4"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour5"
@@ -411,7 +443,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_5"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour6"
@@ -419,7 +453,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_6"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour7"
@@ -427,7 +463,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_7"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour8"
@@ -435,7 +473,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_8"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour9"
@@ -443,7 +483,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_9"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour10"
@@ -451,7 +493,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_10"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour11"
@@ -459,7 +503,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_11"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour12"
@@ -467,7 +513,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_12"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour13"
@@ -475,7 +523,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_13"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour14"
@@ -483,7 +533,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_14"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour15"
@@ -491,7 +543,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_15"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour16"
@@ -499,7 +553,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_16"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour17"
@@ -507,7 +563,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_17"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour18"
@@ -515,7 +573,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_18"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour19"
@@ -523,7 +583,9 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_19"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_tempHour20"
@@ -531,7 +593,267 @@
                         android:layout_height="17dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/temp_hour_20"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt_popHour7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_7"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_14"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_10"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_2"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_1"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_20"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_6"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_15"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_3"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_4"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableTint="#1F2F67"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_5"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_12"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableTint="#1F2F67"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_17"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableTint="#1F2F67"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_16"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableTint="#1F2F67"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_8"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableTint="#1F2F67"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_18"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_13"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableTint="#1F2F67"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_19"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableTint="#1F2F67"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_11"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_9"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
                 </TableRow>
 
             </TableLayout>
@@ -541,8 +863,9 @@
             android:id="@+id/txt_currentCity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="48dp"
             android:text="@string/current_city"
+            android:textColor="@android:color/primary_text_dark"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -552,23 +875,29 @@
             android:id="@+id/txt_currentTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="64dp"
             android:text="@string/temp_hour_0"
-            android:textSize="20sp"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="96sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_currentWeather" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_currentCity" />
 
-        <ImageView
-            android:id="@+id/img_currentWeather"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="84dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="?android:attr/galleryItemBackground" />
+        <ImageButton
+            android:id="@+id/btn_locateMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@string/btn_locateMe"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_currentCity"
+            app:layout_constraintStart_toEndOf="@+id/txt_currentCity"
+            app:layout_constraintTop_toTopOf="@+id/txt_currentCity"
+            app:srcCompat="@android:drawable/ic_menu_mylocation"
+            tools:ignore="ImageContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

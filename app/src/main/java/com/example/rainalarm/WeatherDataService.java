@@ -26,13 +26,23 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class WeatherDataService {
+import java.io.Serializable;
+
+public class WeatherDataService implements Serializable {
     final String API_KEY = "d1e397184bca47a4d90428c5fb8df78f";
 
-    final double latitude = 48.3804453;
-    final double longitude = -4.5120015;
+    double latitude = 48.8566;
+    double longitude = 2.3522;
 
     Context ctx;
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
 
     public WeatherDataService(Context ctx) {
         this.ctx = ctx;
@@ -103,7 +113,7 @@ public class WeatherDataService {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                weatherForecastListener.onError("Something went wrong..");
+                weatherForecastListener.onError("Something went wrong..\nPlease check for network connection and try again");
             }
         });
         if (ctx != null)
