@@ -25,6 +25,8 @@ In some devices, the alerts system may not work as expected due to OS level back
 - If you don't recieve any alerts after closing the app, **make sure you didn't close it from the recent apps tray**. Some OS identify this as an intention to **force stop** the app, which is not the normal behavior recommended by Android.
 - If you don't recieve any alerts after restarting your phone, you can try to give the app the permission to auto start. This is usually found on the app info settings.
 
+- Sometimes the location won't work even if the permission is granted, opening google maps and restarting the app worked for me.
+
 ## Support
 Soon..
 
