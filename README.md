@@ -15,7 +15,8 @@ Just install the APK and you're good to go!
 ## Usage
 Just open the app, locate yourself and the app will do all the work.
 
-- The periodicity of the rain check is set to **3 hours**. Note that this is just an estimate (a minimum) since your device will execute the check only when certain conditions are met. For example: You won't recieve any notifications if your phone is in **doze mode** (Left idle for a certain duration)
+- The periodicity of the rain check is set to **3 hours**. Note that this is just an **estimate** (a minimum) since your device will execute the check only when certain conditions are met. 
+For example: You won't recieve any notifications if your phone is in **doze mode** (Left idle for a certain duration)
 - You will only recieve alerts if it will rain from 7:00 to 22:00.
 
 ## Issues
