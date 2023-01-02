@@ -1,6 +1,11 @@
 package com.example.rainalarm;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.work.Constraints;
+import androidx.work.ExistingPeriodicWorkPolicy;
+import androidx.work.NetworkType;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
@@ -13,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView[] img_weatherHour = new ImageView[21];
 
     WeatherDataService wds = new WeatherDataService(this);
+
 //    private BroadcastReceiver receiver = new BroadcastReceiver() {
 //        @Override
 //        public void onReceive(Context context, Intent intent) {
@@ -37,7 +44,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Util.scheduleJob(this);
+
+        Constraints constraints = new Constraints.Builder()
+                .setRequiredNetworkType(NetworkType.CONNECTED)
+                .build();
+
+        PeriodicWorkRequest weatherRequest = new PeriodicWorkRequest.Builder(
+                WeatherNotificationService.class, 20, TimeUnit.MINUTES)
+                .setConstraints(constraints)
+                .addTag("rain_check")
+                .build();
+
+        WorkManager.getInstance(this).cancelAllWorkByTag("rain_check");
+        WorkManager.getInstance(this).enqueueUniquePeriodicWork(
+                "checkWeather",
+                ExistingPeriodicWorkPolicy.KEEP,
+                weatherRequest);
+
         txt_currentCity = findViewById(R.id.txt_currentCity);
         txt_currentTemp = findViewById(R.id.txt_currentTemp);
         txt_customMsg = findViewById(R.id.txt_customMsg);

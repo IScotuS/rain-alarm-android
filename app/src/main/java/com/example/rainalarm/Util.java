@@ -10,8 +10,9 @@ public class Util {
     public static void scheduleJob(Context context) {
         ComponentName serviceComponent = new ComponentName(context, WeatherDataService.class);
         JobInfo.Builder builder = new JobInfo.Builder(0, serviceComponent);
-        builder.setMinimumLatency(10000); // wait at least
-        builder.setOverrideDeadline(30000); // maximum delay
+        builder.setPeriodic(90000);
+        builder.setPersisted(true);
+
 
         builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY);
 

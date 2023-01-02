@@ -3,7 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -26,11 +31,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <service
-            android:name="com.example.rainalarm.WeatherDataService"
-            android:label="Weather Service"
-            android:permission="android.permission.BIND_JOB_SERVICE">
-        </service>
+<!--        <service-->
+<!--            android:name="com.example.rainalarm.WeatherDataService"-->
+<!--            android:label="Weather Service"-->
+<!--            android:permission="android.permission.BIND_JOB_SERVICE">-->
+<!--        </service>-->
     </application>
 
 </manifest>

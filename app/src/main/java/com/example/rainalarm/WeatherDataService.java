@@ -11,7 +11,10 @@ import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.work.Worker;
+import androidx.work.WorkerParameters;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -23,17 +26,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class WeatherDataService extends JobService {
+public class WeatherDataService {
     final String API_KEY = "d1e397184bca47a4d90428c5fb8df78f";
 
     final double latitude = 48.3804453;
     final double longitude = -4.5120015;
 
     Context ctx;
-
-    public WeatherDataService() {
-//        super("WeatherDataService");
-    }
 
     public WeatherDataService(Context ctx) {
         this.ctx = ctx;
@@ -49,44 +48,6 @@ public class WeatherDataService extends JobService {
         void onResponse(WeatherDataModel weather_forecast_hour, int i);
 
         void onError(String message);
-    }
-
-    @Override
-    public boolean onStartJob(JobParameters jobParameters) {
-        Intent intent = new Intent("com.example.rainalarm");
-
-        getWeatherReport(new WeatherForecastListener() {
-            @Override
-            public void onResponse(WeatherDataModel[] weather_forecast) {
-                intent.putExtra("temp", weather_forecast);
-                Log.v("SCHEDULER", "Temp Success!");
-                Toast.makeText(getApplicationContext(), "Temp Success!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onError(String message) {
-                intent.putExtra("error_temp", message);
-            }
-        }, new WeatherImageListener() {
-            @Override
-            public void onResponse(WeatherDataModel weather_forecast_hour, int i) {
-                intent.putExtra("icon", weather_forecast_hour);
-                intent.putExtra("index", i);
-            }
-
-            @Override
-            public void onError(String message) {
-                intent.putExtra("error_icon", message);
-            }
-        });
-
-        Util.scheduleJob(getApplicationContext());
-        return true;
-    }
-
-    @Override
-    public boolean onStopJob(JobParameters jobParameters) {
-        return false;
     }
 
     public void getWeatherReport(WeatherForecastListener weatherForecastListener, WeatherImageListener weatherImageListener) {
@@ -145,7 +106,11 @@ public class WeatherDataService extends JobService {
                 weatherForecastListener.onError("Something went wrong..");
             }
         });
-        MySingleton.getInstance(ctx).addToRequestQueue(jsonRequest);
+        if (ctx != null)
+            MySingleton.getInstance(ctx).addToRequestQueue(jsonRequest);
+//        else
+//            MySingleton.getInstance(this).addToRequestQueue(jsonRequest);
+
     }
 
     public void loadImage(String iconCode, WeatherDataModel weather_forecast_hour, int index, WeatherImageListener weatherImageListener) {
@@ -158,6 +123,9 @@ public class WeatherDataService extends JobService {
                         weatherImageListener.onResponse(weather_forecast_hour, index);
                     }
                 }, 0, 0, null, null, error -> weatherImageListener.onError("Couldn't load image"));
-        MySingleton.getInstance(ctx).addToRequestQueue(imageRequest);
+        if (ctx != null)
+            MySingleton.getInstance(ctx).addToRequestQueue(imageRequest);
+//        else
+//            MySingleton.getInstance(this).addToRequestQueue(imageRequest);
     }
 }
