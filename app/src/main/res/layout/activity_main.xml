@@ -27,7 +27,6 @@
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="96dp"
             android:scrollbarThumbHorizontal="@null"
             app:layout_constraintStart_toStartOf="parent"
@@ -218,168 +217,168 @@
                         android:id="@+id/img_weatherHour0"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour1"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour2"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour3"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour4"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour5"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour6"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour7"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour8"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour9"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour10"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour11"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour12"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour13"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour14"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour15"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour16"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour17"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour18"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour19"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
 
                     <ImageView
                         android:id="@+id/img_weatherHour20"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         app:srcCompat="?android:attr/galleryItemBackground" />
                 </TableRow>
 

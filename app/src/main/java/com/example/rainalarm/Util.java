@@ -1,8 +1,5 @@
 package com.example.rainalarm;
 
-import android.app.job.JobInfo;
-import android.app.job.JobScheduler;
-import android.content.ComponentName;
 import android.content.Context;
 
 import androidx.work.Constraints;
@@ -16,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Util {
     // schedule the start of the service every 10 - 30 seconds
-    public static void scheduleWork(Context context, double longitude, double latitude) {
+    public static void scheduleWork(Context context, double longitude, double latitude, String city) {
         Constraints constraints = new Constraints.Builder()
                 .setRequiredNetworkType(NetworkType.CONNECTED)
                 .build();
@@ -24,6 +21,7 @@ public class Util {
         Data.Builder data = new Data.Builder();
         data.putDouble("longitude", longitude);
         data.putDouble("latitude", latitude);
+        data.putString("city", city);
 
         PeriodicWorkRequest weatherRequest = new PeriodicWorkRequest.Builder(
                 WeatherNotificationService.class, 3, TimeUnit.HOURS)

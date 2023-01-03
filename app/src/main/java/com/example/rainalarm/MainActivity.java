@@ -1,31 +1,25 @@
 package com.example.rainalarm;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
+import static android.Manifest.permission.POST_NOTIFICATIONS;
 
 import static androidx.core.content.PermissionChecker.PERMISSION_GRANTED;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.work.Constraints;
-import androidx.work.Data;
-import androidx.work.ExistingPeriodicWorkPolicy;
-import androidx.work.NetworkType;
-import androidx.work.PeriodicWorkRequest;
-import androidx.work.WorkManager;
 
 import android.annotation.SuppressLint;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
-import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,10 +27,14 @@ import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.Priority;
+import com.google.android.gms.tasks.CancellationToken;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.OnTokenCanceledListener;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,8 +46,17 @@ public class MainActivity extends AppCompatActivity {
     TextView[] txt_popHour = new TextView[21];
     ImageView[] img_weatherHour = new ImageView[21];
     WeatherDataService wds = new WeatherDataService(this);
-    ActivityResultLauncher<String> permissionLauncher;
+    ActivityResultLauncher<String> locationPermissionLauncher;
+    ActivityResultLauncher<String> notificationPermissionLauncher;
+
     FusedLocationProviderClient fusedLocationClient;
+    Geocoder geocoder;
+    List<Address> addresses;
+
+    boolean gotLocation = false;
+
+    String city = "Paris";
+
 
 //    private BroadcastReceiver receiver = new BroadcastReceiver() {
 //        @Override
@@ -73,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-        permissionLauncher = registerForActivityResult(
+        locationPermissionLauncher = registerForActivityResult(
                 new ActivityResultContracts.RequestPermission(),
                 new ActivityResultCallback<Boolean>() {
                     @SuppressLint("MissingPermission")
@@ -91,14 +98,29 @@ public class MainActivity extends AppCompatActivity {
                                             // Got last known location. In some rare situations this can be null.
                                             if (location != null) {
                                                 // Logic to handle location object
-                                                wds.setLatitude(location.getLatitude());
-                                                wds.setLongitude(location.getLongitude());
+                                                double latitude = location.getLatitude();
+                                                double longitude = location.getLongitude();
+                                                wds.setLatitude(latitude);
+                                                wds.setLongitude(longitude);
+
+                                                try {
+                                                    addresses = geocoder.getFromLocation(latitude, longitude, 1);
+                                                    city = addresses.get(0).getLocality();
+                                                    txt_currentCity.setText(city);
+                                                    gotLocation = true;
+                                                } catch (IOException e) {
+                                                    e.printStackTrace();
+                                                }
                                                 updateWeather();
                                                 Util.scheduleWork(MainActivity.this,
-                                                        location.getLongitude(),
-                                                        location.getLatitude());
+                                                        longitude,
+                                                        latitude,
+                                                        city);
                                             }
+                                            else
+                                                Toast.makeText(MainActivity.this, "Couldn't get current location", Toast.LENGTH_LONG).show();
                                         }
+
                                     });
                         }
                         else
@@ -107,8 +129,36 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.LENGTH_LONG).show();
                     }
                 });
+        notificationPermissionLauncher = registerForActivityResult(
+                new ActivityResultContracts.RequestPermission(),
+                new ActivityResultCallback<Boolean>() {
+                    @Override
+                    public void onActivityResult(Boolean isGranted) {
+                        if (isGranted) {
+                            // Use notifications
+                            Toast.makeText(MainActivity.this,
+                                    "Notifications permission granted",
+                                    Toast.LENGTH_LONG).show();
+                            Util.scheduleWork(MainActivity.this, wds.longitude, wds.latitude, city);
 
-        Util.scheduleWork(this, wds.longitude, wds.latitude);
+                        } else
+                            Toast.makeText(MainActivity.this,
+                                    "App needs notifications permission to send alerts",
+                                    Toast.LENGTH_LONG).show();
+
+                    }
+                }
+        );
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(MainActivity.this,
+                    POST_NOTIFICATIONS) != PERMISSION_GRANTED)
+                notificationPermissionLauncher.launch(POST_NOTIFICATIONS);
+            else
+                Util.scheduleWork(this, wds.longitude, wds.latitude, city);
+        }
+        else
+            Util.scheduleWork(this, wds.longitude, wds.latitude, city);
 
         txt_currentCity = findViewById(R.id.txt_currentCity);
         txt_currentTemp = findViewById(R.id.txt_currentTemp);
@@ -134,28 +184,53 @@ public class MainActivity extends AppCompatActivity {
             img_weatherHour[i] = findViewById(weatherID);
         }
 
+        geocoder = new Geocoder(MainActivity.this, Locale.getDefault());
+
+
         btn_locateMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Check for location permission
                 if(ContextCompat.checkSelfPermission(MainActivity.this,
                         ACCESS_COARSE_LOCATION) != PERMISSION_GRANTED)
-                    permissionLauncher.launch(ACCESS_COARSE_LOCATION);
+                    locationPermissionLauncher.launch(ACCESS_COARSE_LOCATION);
                 else
-                    fusedLocationClient.getLastLocation()
-                            .addOnSuccessListener(MainActivity.this, new OnSuccessListener<Location>() {
+                    fusedLocationClient.getCurrentLocation(Priority.PRIORITY_BALANCED_POWER_ACCURACY, new CancellationToken() {
+                            @NonNull
+                            @Override
+                            public CancellationToken onCanceledRequested(@NonNull OnTokenCanceledListener onTokenCanceledListener) {
+                                return null;
+                            }
+
+                            @Override
+                            public boolean isCancellationRequested() {
+                                return false;
+                            }
+                        }).addOnSuccessListener(MainActivity.this, new OnSuccessListener<Location>() {
                                 @Override
                                 public void onSuccess(Location location) {
                                     // Got last known location. In some rare situations this can be null.
                                     if (location != null) {
                                         // Logic to handle location object
-                                        wds.setLatitude(location.getLatitude());
-                                        wds.setLongitude(location.getLongitude());
+                                        double latitude = location.getLatitude();
+                                        double longitude = location.getLongitude();
+                                        wds.setLatitude(latitude);
+                                        wds.setLongitude(longitude);
+                                        try {
+                                            addresses = geocoder.getFromLocation(latitude, longitude, 1);
+                                            txt_currentCity.setText(addresses.get(0).getLocality());
+                                            gotLocation = true;
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
                                         updateWeather();
                                         Util.scheduleWork(MainActivity.this,
-                                                location.getLongitude(),
-                                                location.getLatitude());
+                                                longitude,
+                                                latitude,
+                                                addresses.get(0).getLocality());
                                     }
+                                    else
+                                        Toast.makeText(MainActivity.this, "Couldn't get current location", Toast.LENGTH_LONG).show();
                                 }
                             });
             }
@@ -175,7 +250,8 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onResponse(WeatherDataModel[] weather_forecast) {
-                txt_currentCity.setText(weather_forecast[0].getCity());
+                if (!gotLocation)
+                    txt_currentCity.setText(city);
                 txt_currentTemp.setText(String.format(Locale.getDefault(), "%.0f°C", weather_forecast[0].getTemp()));
                 txt_customMsg.setText(weather_forecast[0].getDescription().substring(0, 1).toUpperCase() + weather_forecast[0].getDescription().substring(1).toLowerCase());
 
