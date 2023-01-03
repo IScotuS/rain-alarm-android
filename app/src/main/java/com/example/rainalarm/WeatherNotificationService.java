@@ -66,6 +66,9 @@ public class WeatherNotificationService extends Worker {
 
     public void showNotification(float pop, float time, String city) {
         Intent activityIntent = new Intent(ctx, MainActivity.class);
+        activityIntent.setAction(Intent.ACTION_MAIN);
+        activityIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+
         PendingIntent activityPendingIntent = PendingIntent.getActivity(
                 ctx,
                 1,
