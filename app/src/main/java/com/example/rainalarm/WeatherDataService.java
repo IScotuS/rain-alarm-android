@@ -1,17 +1,24 @@
 package com.example.rainalarm;
 
-import static android.content.ContentValues.TAG;
-
+import android.app.Service;
+import android.app.job.JobParameters;
+import android.app.job.JobScheduler;
+import android.app.job.JobService;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.work.Worker;
+import androidx.work.WorkerParameters;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 
@@ -19,23 +26,28 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
+import java.io.Serializable;
 
-import javax.net.ssl.HttpsURLConnection;
-
-public class WeatherDataService {
+public class WeatherDataService implements Serializable {
     final String API_KEY = "d1e397184bca47a4d90428c5fb8df78f";
 
+    double latitude = 48.8566;
+    double longitude = 2.3522;
+
     Context ctx;
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
 
     public WeatherDataService(Context ctx) {
         this.ctx = ctx;
     }
-    
+
     public interface WeatherForecastListener {
         void onResponse(WeatherDataModel[] weather_forecast);
 
@@ -47,9 +59,8 @@ public class WeatherDataService {
 
         void onError(String message);
     }
-    
-    
-    public void getWeatherReport(double latitude, double longitude, WeatherForecastListener weatherForecastListener, WeatherImageListener weatherImageListener) {
+
+    public void getWeatherReport(WeatherForecastListener weatherForecastListener, WeatherImageListener weatherImageListener) {
         String url = "https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=" + latitude
                 + "&lon=" + longitude + "&appid=" + API_KEY + "&units=metric&cnt=21";
 
@@ -102,10 +113,14 @@ public class WeatherDataService {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                weatherForecastListener.onError("Something went wrong..");
+                weatherForecastListener.onError("Something went wrong..\nPlease check for network connection and try again");
             }
         });
-        MySingleton.getInstance(ctx).addToRequestQueue(jsonRequest);
+        if (ctx != null)
+            MySingleton.getInstance(ctx).addToRequestQueue(jsonRequest);
+//        else
+//            MySingleton.getInstance(this).addToRequestQueue(jsonRequest);
+
     }
 
     public void loadImage(String iconCode, WeatherDataModel weather_forecast_hour, int index, WeatherImageListener weatherImageListener) {
@@ -118,6 +133,9 @@ public class WeatherDataService {
                         weatherImageListener.onResponse(weather_forecast_hour, index);
                     }
                 }, 0, 0, null, null, error -> weatherImageListener.onError("Couldn't load image"));
-        MySingleton.getInstance(ctx).addToRequestQueue(imageRequest);
+        if (ctx != null)
+            MySingleton.getInstance(ctx).addToRequestQueue(imageRequest);
+//        else
+//            MySingleton.getInstance(this).addToRequestQueue(imageRequest);
     }
 }

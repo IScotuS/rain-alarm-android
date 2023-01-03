@@ -2,7 +2,9 @@ package com.example.rainalarm;
 
 import android.graphics.Bitmap;
 
-public class WeatherDataModel {
+import java.io.Serializable;
+
+public class WeatherDataModel implements Serializable {
 
     private String city;
     private float temp;
