@@ -42,7 +42,6 @@ public class WeatherNotificationService extends Worker {
                 if (elems != null)
                     showNotification(elems[0], elems[1]);
                 Log.v("SCHEDULER", "Temp Success!");
-                Toast.makeText(getApplicationContext(), "Check finished", Toast.LENGTH_SHORT).show();
             }
 
             @Override

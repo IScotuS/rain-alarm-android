@@ -603,48 +603,12 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/txt_popHour7"
+                        android:id="@+id/txt_popHour0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_7"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/primary_text_dark"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
-                        app:drawableTint="#1F2F67" />
-
-                    <TextView
-                        android:id="@+id/txt_popHour14"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_14"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/primary_text_dark"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
-                        app:drawableTint="#1F2F67" />
-
-                    <TextView
-                        android:id="@+id/txt_popHour10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_10"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/primary_text_dark"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
-                        app:drawableTint="#1F2F67" />
-
-                    <TextView
-                        android:id="@+id/txt_popHour2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_2"
+                        android:text="@string/pop_hour_0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/primary_text_dark"
                         app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
@@ -663,48 +627,12 @@
                         app:drawableTint="#1F2F67" />
 
                     <TextView
-                        android:id="@+id/txt_popHour20"
+                        android:id="@+id/txt_popHour2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_20"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/primary_text_dark"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
-                        app:drawableTint="#1F2F67" />
-
-                    <TextView
-                        android:id="@+id/txt_popHour6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_6"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/primary_text_dark"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
-                        app:drawableTint="#1F2F67" />
-
-                    <TextView
-                        android:id="@+id/txt_popHour15"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_15"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/primary_text_dark"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
-                        app:drawableTint="#1F2F67" />
-
-                    <TextView
-                        android:id="@+id/txt_popHour0"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_0"
+                        android:text="@string/pop_hour_2"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/primary_text_dark"
                         app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
@@ -731,8 +659,8 @@
                         android:text="@string/pop_hour_4"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/primary_text_dark"
-                        app:drawableTint="#1F2F67"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
 
                     <TextView
                         android:id="@+id/txt_popHour5"
@@ -747,40 +675,28 @@
                         app:drawableTint="#1F2F67" />
 
                     <TextView
-                        android:id="@+id/txt_popHour12"
+                        android:id="@+id/txt_popHour6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_12"
+                        android:text="@string/pop_hour_6"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/primary_text_dark"
-                        app:drawableTint="#1F2F67"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
 
                     <TextView
-                        android:id="@+id/txt_popHour17"
+                        android:id="@+id/txt_popHour7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_17"
+                        android:text="@string/pop_hour_7"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/primary_text_dark"
-                        app:drawableTint="#1F2F67"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
-
-                    <TextView
-                        android:id="@+id/txt_popHour16"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_16"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/primary_text_dark"
-                        app:drawableTint="#1F2F67"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
 
                     <TextView
                         android:id="@+id/txt_popHour8"
@@ -791,44 +707,32 @@
                         android:text="@string/pop_hour_8"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/primary_text_dark"
-                        app:drawableTint="#1F2F67"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
 
                     <TextView
-                        android:id="@+id/txt_popHour18"
+                        android:id="@+id/txt_popHour9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_18"
+                        android:text="@string/pop_hour_9"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/primary_text_dark"
                         app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
                         app:drawableTint="#1F2F67" />
 
                     <TextView
-                        android:id="@+id/txt_popHour13"
+                        android:id="@+id/txt_popHour10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_13"
+                        android:text="@string/pop_hour_10"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/primary_text_dark"
-                        app:drawableTint="#1F2F67"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
-
-                    <TextView
-                        android:id="@+id/txt_popHour19"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_19"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/primary_text_dark"
-                        app:drawableTint="#1F2F67"
-                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24" />
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
 
                     <TextView
                         android:id="@+id/txt_popHour11"
@@ -843,12 +747,108 @@
                         app:drawableTint="#1F2F67" />
 
                     <TextView
-                        android:id="@+id/txt_popHour9"
+                        android:id="@+id/txt_popHour12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:drawablePadding="10dp"
-                        android:text="@string/pop_hour_9"
+                        android:text="@string/pop_hour_12"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_13"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_14"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_15"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_16"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_17"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_18"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_19"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/primary_text_dark"
+                        app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"
+                        app:drawableTint="#1F2F67" />
+
+                    <TextView
+                        android:id="@+id/txt_popHour20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/pop_hour_20"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/primary_text_dark"
                         app:drawableStartCompat="@drawable/ic_baseline_water_drop_24"

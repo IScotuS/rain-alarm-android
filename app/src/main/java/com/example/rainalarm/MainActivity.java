@@ -108,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        Toast.makeText(getApplicationContext(), "Checking for rain..", Toast.LENGTH_SHORT).show();
         Util.scheduleWork(this, wds.longitude, wds.latitude);
 
         txt_currentCity = findViewById(R.id.txt_currentCity);
@@ -153,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
                                         wds.setLatitude(location.getLatitude());
                                         wds.setLongitude(location.getLongitude());
                                         updateWeather();
-                                        Toast.makeText(getApplicationContext(), "Checking for rain..", Toast.LENGTH_SHORT).show();
                                         Util.scheduleWork(MainActivity.this,
                                                 location.getLongitude(),
                                                 location.getLatitude());
